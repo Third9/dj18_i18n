@@ -9,8 +9,6 @@ from django.utils.translation import activate
 # Create your views here.
 class MyApp(TemplateView):
     def get(self, request, *args, **kwargs):
-        current_path = request.path
-
         return render(request,
                       context={'serverTitle_i18n': _("__server_title__"),
                                'serverBody_i18n': _("__server_body__")},
